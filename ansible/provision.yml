@@ -14,8 +14,17 @@
 
   tasks:
 
+    # sudo apt-get -y update
+    # sudo -e nginx || sudo apt-get -y nginx
     - name: Install nginx
       become: true
       apt:
         name: nginx
         update_cache: true
+
+    - name: Install Python 3
+      become: true
+      apt:
+        name: python3
+        update_cache: true
+
